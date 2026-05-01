@@ -111,7 +111,7 @@ public class UpdateService : IDisposable
             StartInfo = new ProcessStartInfo(path)
             {
                 UseShellExecute = true,
-                Arguments = "/SILENT /SUPPRESSMSGBOXES /CLOSEAPPLICATIONS"
+                Arguments = "/SILENT /SUPPRESSMSGBOXES"
             }
         }.Start();
         MacroDeck.Exit();

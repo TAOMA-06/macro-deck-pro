@@ -8,6 +8,7 @@
 #define ApplicationDirectory "..\MacroDeck\bin\Publish"
 #define ApplicationVersion GetStringFileInfo(ApplicationDirectory + '\' + MyAppExeName, "ProductVersion")     
 #define OutputFileName "macro-deck-pro-{#ApplicationVersion}"
+#define AppGuid "4E6D7253-1DDF-422D-A2D2-3D2A8505B316"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -31,10 +32,96 @@ Compression=lzma
 SolidCompression=yes
 WizardStyle=modern 
 ArchitecturesInstallIn64BitMode=x64
+CloseApplications=no
+AppMutex=MacroDeckMutex
 UninstallDisplayName={#MyAppName}
 UninstallDisplayIcon={app}\{#MyAppExeName} 
 
 [Code]
+const
+  AppMutexName = 'MacroDeckMutex';
+
+procedure DeleteExistingFirewallRules;
+var
+  ResultCode: Integer;
+begin
+  Exec('{sys}\netsh.exe', 'advfirewall firewall delete rule name="Macro Deck Pro"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+end;
+
+function InitializeSetup: Boolean;
+var
+  ResultCode: Integer;
+  UninstallString: string;
+  uninstallerPath: string;
+  appKey: string;
+begin
+  Result := True;
+
+  // Step 1: Force kill the main application process
+  Exec(ExpandConstant('{sys}\taskkill.exe'), '/f /im "{#MyAppExeName}"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+  Log(Format('taskkill %s returned %d', ['{#MyAppExeName}', ResultCode]));
+
+  // Step 2: Force kill ADB server (prevents file locks in Android Debug Bridge\)
+  Exec(ExpandConstant('{sys}\taskkill.exe'), '/f /im "adb.exe"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+  Log(Format('taskkill adb.exe returned %d', [ResultCode]));
+
+  // Step 3: Find and silently uninstall the previous version
+  appKey := 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{' + '{#AppGuid}' + '}_is1';
+
+  if RegQueryStringValue(HKLM, appKey, 'UninstallString', UninstallString) then
+  begin
+    Log('Found previous installation (HKLM), running uninstaller: ' + UninstallString);
+    uninstallerPath := RemoveQuotes(UninstallString);
+    if FileExists(uninstallerPath) then
+    begin
+      Exec(uninstallerPath, '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+      Log(Format('Uninstall completed with code %d', [ResultCode]));
+    end
+    else
+    begin
+      Log('Uninstaller not found at: ' + uninstallerPath);
+    end;
+  end
+  else if RegQueryStringValue(HKCU, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{' + '{#AppGuid}' + '}_is1', 'UninstallString', UninstallString) then
+  begin
+    Log('Found previous installation (HKCU), running uninstaller: ' + UninstallString);
+    uninstallerPath := RemoveQuotes(UninstallString);
+    if FileExists(uninstallerPath) then
+    begin
+      Exec(uninstallerPath, '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+      Log(Format('Uninstall completed with code %d', [ResultCode]));
+    end
+    else
+    begin
+      Log('Uninstaller not found at: ' + uninstallerPath);
+    end;
+  end
+  else
+  begin
+    Log('No previous installation found, proceeding with clean install.');
+  end;
+
+  // Step 4: Remove old firewall rules (will be re-added in [Run])
+  DeleteExistingFirewallRules;
+end;
+
+function InitializeUninstall: Boolean;
+var
+  ResultCode: Integer;
+begin
+  Result := True;
+  Exec(ExpandConstant('{sys}\taskkill.exe'), '/f /im "{#MyAppExeName}"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+  Exec(ExpandConstant('{sys}\taskkill.exe'), '/f /im "adb.exe"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+end;
+
+procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+begin
+  if CurUninstallStep = usPostUninstall then
+  begin
+    DeleteExistingFirewallRules;
+  end;
+end;
+
 function VC2019RedistNeedsInstall: Boolean;
 var 
   Version: String;
@@ -73,6 +160,7 @@ Name: "finnish"; MessagesFile: "compiler:Languages\Finnish.isl"
 Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 Name: "german"; MessagesFile: "compiler:Languages\German.isl"
 Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"
+Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
 Name: "italian"; MessagesFile: "compiler:Languages\Italian.isl"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
 Name: "norwegian"; MessagesFile: "compiler:Languages\Norwegian.isl"
@@ -94,6 +182,14 @@ Source: ".\Redist\VC_redist.x64.exe"; DestDir: {tmp}; Flags: dontcopy
 Source: ".\Android Debug Bridge\*"; DestDir: "{app}\Android Debug Bridge\"; Flags: ignoreversion
 Source: "{#ApplicationDirectory}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs  
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[UninstallRun]
+Filename: "{sys}\netsh.exe"; Parameters: "advfirewall firewall delete rule name=""Macro Deck Pro"""; Flags: runhidden;
+
+[UninstallDelete]
+Type: filesandordirs; Name: "{app}\Android Debug Bridge"
+Type: files; Name: "{app}\*.log"
+Type: dirifempty; Name: "{app}"
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
