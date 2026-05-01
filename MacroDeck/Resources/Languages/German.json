@@ -329,5 +329,11 @@
   "OpenSettings": "Einstellungen öffnen",
   "EnableADB": "Android Debug Bridge aktivieren (Erforderlich für Android USB-Verbindung)",
   "ADBAutoStartApp": "Bildschirm automatisch aktivieren und Macro Deck Client beim Verbinden starten",
-  "USBSection": "USB"
+  "USBSection": "USB",
+  "ActionLaunchProgram": "Launch program",
+  "ActionLaunchProgramDescription": "Launches a program or application",
+  "FilePath": "File path",
+  "Browse": "Browse",
+  "Arguments": "Arguments",
+  "WorkingDirectory": "Working directory"
 }

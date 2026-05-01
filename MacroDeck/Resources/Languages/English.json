@@ -329,5 +329,22 @@
   "OpenSettings": "Open settings",
   "EnableADB": "Enable Android Debug Bridge (Required for Android USB connection)",
   "ADBAutoStartApp": "Automatically wake screen and start Macro Deck Client when connected",
-  "USBSection": "USB"
+  "USBSection": "USB",
+  "JoinDiscord": "Join our Discord server",
+  "Donate": "Donate",
+  "ShowQrCodeAndNetwork": "Show Quick Setup QR code and network informations",
+  "NetworkInterfaces": "Network interfaces",
+  "PortLabel": "Port: {0}",
+  "CheckForUpdatesFailed": "Check for updates failed",
+  "CheckForUpdatesFailedMessage": "Make sure you have a internet connection",
+  "SslCertificateNotFound": "SSL Certificate not found",
+  "SslCertificateNotFoundMessage": "You enabled SSL but don't provide a valid certificate path.",
+  "SelectCertificate": "Select certificate",
+  "LicensedUnderApache": "Licensed under Apache-2.0",
+  "ActionLaunchProgram": "Launch program",
+  "ActionLaunchProgramDescription": "Launches a program or application",
+  "FilePath": "File path",
+  "Browse": "Browse",
+  "Arguments": "Arguments",
+  "WorkingDirectory": "Working directory"
 }

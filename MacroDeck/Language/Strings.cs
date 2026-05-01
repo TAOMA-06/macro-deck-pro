@@ -346,4 +346,22 @@ public class Strings
     public string EnableADB = "Enable Android Debug Bridge (Required for Android USB connection)";
     public string ADBAutoStartApp = "Automatically wake screen and start Macro Deck Client when connected";
     public string USBSection = "USB";
+    
+    public string JoinDiscord = "Join our Discord server";
+    public string Donate = "Donate";
+    public string ShowQrCodeAndNetwork = "Show Quick Setup QR code and network informations";
+    public string NetworkInterfaces = "Network interfaces";
+    public string PortLabel = "Port: {0}";
+    public string CheckForUpdatesFailed = "Check for updates failed";
+    public string CheckForUpdatesFailedMessage = "Make sure you have a internet connection";
+    public string SslCertificateNotFound = "SSL Certificate not found";
+    public string SslCertificateNotFoundMessage = "You enabled SSL but don't provide a valid certificate path.";
+    public string SelectCertificate = "Select certificate";
+    public string LicensedUnderApache = "Licensed under Apache-2.0";
+    public string ActionLaunchProgram = "Launch program";
+    public string ActionLaunchProgramDescription = "Launches a program or application";
+    public string FilePath = "File path";
+    public string Browse = "Browse";
+    public string Arguments = "Arguments";
+    public string WorkingDirectory = "Working directory";
 }

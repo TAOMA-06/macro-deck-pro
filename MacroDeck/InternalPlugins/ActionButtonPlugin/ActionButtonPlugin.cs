@@ -18,6 +18,7 @@ public class ActionButtonPlugin : MacroDeckPlugin
             new ActionButtonSetStateOffAction(),
             new ActionButtonSetStateOnAction(),
             new ActionButtonSetBackgroundColorAction(),
+            new LaunchProgramAction(),
         };
     }
 }

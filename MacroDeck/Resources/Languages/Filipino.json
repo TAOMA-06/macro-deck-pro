@@ -322,5 +322,11 @@
     "Random": "Random",
     "EnableADB": "Enable Android Debug Bridge (Required for Android USB connection)",
     "ADBAutoStartApp": "Automatically wake screen and start Macro Deck Client when connected",
-    "USBSection": "USB"
+    "USBSection": "USB",
+    "ActionLaunchProgram": "Launch program",
+    "ActionLaunchProgramDescription": "Launches a program or application",
+    "FilePath": "File path",
+    "Browse": "Browse",
+    "Arguments": "Arguments",
+    "WorkingDirectory": "Working directory"
 }

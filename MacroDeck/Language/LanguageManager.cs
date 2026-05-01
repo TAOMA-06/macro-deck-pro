@@ -102,6 +102,17 @@ public static class LanguageManager
         return _strings.__LanguageCode__;
     }
 
+    public static string GetDefaultFontFamily()
+    {
+        return _strings.__LanguageCode__ switch
+        {
+            "zh" => "Microsoft YaHei",
+            "ja" => "Meiryo UI",
+            "ko" => "Malgun Gothic",
+            _ => "Segoe UI"
+        };
+    }
+
 
 
 }
