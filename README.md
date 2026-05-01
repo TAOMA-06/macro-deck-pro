@@ -89,6 +89,13 @@ Macro Deck Pro maintains **full compatibility** with all existing Macro Deck plu
 - Displayed directly on the deck view with toggle
 - Quick connect data via `QuickConnectQrCodeData.cs`
 
+### 🚀 Launch Program Action *(Not in original)*
+- Browse and select any executable (`.exe`) directly from the button editor
+- **Automatic icon extraction** — program's default icon is recognized, extracted, and saved to an "Application Icons" icon pack
+- Auto-assigns extracted icon to the button — no manual icon selection needed
+- Configurable command-line arguments and working directory
+- Convenient working directory folder browser
+
 ### 🔥 Additional Features
 | Feature | Description |
 |---------|-------------|
@@ -101,6 +108,7 @@ Macro Deck Pro maintains **full compatibility** with all existing Macro Deck plu
 | **Debug Console** | `--debug-console` flag opens dedicated debug console |
 | **Professional Installer** | Inno Setup with 25+ languages, VC++ redist, firewall rules, ADB bundle |
 | **Extended CLI Options** | `--port`, `--portable`, `--log-level`, `--disable-file-logging`, `--force-update`, `--test-channel` |
+| **Launch Program Action** | Select `.exe` → auto-extract icon → auto-assign to button |
 
 ---
 
@@ -248,6 +256,7 @@ ADB-related strings are translated in all 17 languages.
 | Debug console | ❌ | ✅ |
 | Beta update channel | ❌ | ✅ |
 | Portable mode | ❌ | ✅ |
+| **Launch Program Action** | ❌ | ✅ Select `.exe` + auto icon extraction |
 | Professional Inno Setup installer | ❌ | ✅ 25+ languages |
 
 ---
@@ -267,3 +276,12 @@ ADB-related strings are translated in all 17 languages.
 This project is licensed under the same terms as the original Macro Deck 2 project. See the [LICENSE](./LICENSE) file for details.
 
 > **Note**: Macro Deck Pro is an independent fork. It is not affiliated with or endorsed by the original Macro Deck project or SuchByte. However, it maintains full compatibility with the Macro Deck ecosystem.
+
+---
+
+## Contact
+
+If you have any suggestions or feedback, feel free to reach out:
+
+- **QQ / WeChat / Telegram**: `3435587372`
+- **GitHub Issues**: [Submit an issue](https://github.com/TAOMA-06/macro-deck-pro/issues)
