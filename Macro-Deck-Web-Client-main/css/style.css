@@ -1,0 +1,198 @@
+body {
+	padding: 10px;
+}
+
+
+
+
+.bg-dark p, .bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6, .bg-dark label, .bg-dark .text-w {
+	color: white !important;
+}
+
+p, h1, h2, h3, h4, h5, h6, label , .text-w
+ {
+    color: black;
+}
+
+.pressed {
+    transform: scale(0.9);
+}
+
+.release-transition {
+    transition: all .3s linear;
+}
+
+.blockBox {
+	padding: 0;
+}
+
+.bg-dark {
+	background-color: #2d2d2d!important;
+}
+
+.btn-secondary{
+    background-color: #eeeeee !important;
+}
+ 
+.bg-dark .btn-secondary {
+	background-color: #232323!important;
+}
+
+.action-button {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.btn:hover {
+	background-color: #232323!important;
+}
+
+.btn:active {
+	outline: none!important;
+	box-shadow: none!important;
+}
+
+.btn:focus {
+	outline: none!important;
+	box-shadow: none!important;
+}
+
+.button-container {
+	margin: auto;
+	position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+
+.connect-container {
+	margin: auto;
+	height: auto;
+}
+
+.recent-connection-item {
+	background-color: #fff;
+	padding: 10px 10px 10px 10px;
+	margin: 10px 10px 10px 10px;
+	border: 1px solid rgb(90, 90, 90);
+	border-left: 4px solid rgb(31, 95, 161);
+	border-radius: 6px;
+	max-width: 600px;
+	margin: auto;
+}
+
+
+.bg-dark .recent-connection-item {
+	background-color: #353535;
+}
+
+
+ .recent-connection-item:hover { 
+	cursor: pointer;
+	background-color: #ccc; 
+}
+
+.bg-dark .recent-connection-item:hover {
+	background-color: #454545; 
+}
+
+.form-connect {
+  width: 100%;
+  max-width: 390px;
+  padding: 0;
+  margin: 0 auto;
+}
+.form-connect .checkbox {
+  font-weight: 400;
+}
+.form-connect .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-connect .form-control:focus {
+  z-index: 2;
+}
+
+
+.label {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 1.0rem;
+}
+
+.loader-container {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(6px);
+}
+
+.button-done {
+	background-color: #007bff;
+	-webkit-animation: fadeOut;
+    animation: fadeOut;
+    opacity: 0;
+	-webkit-animation-duration: 3s;
+    animation-duration: 3s
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Connection status indicator */
+.connection-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin: 0 auto 10px;
+    width: fit-content;
+    font-size: 13px;
+}
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.status-dot.connected { background: #28a745; box-shadow: 0 0 6px #28a745; }
+.status-dot.reconnecting { background: #ffc107; box-shadow: 0 0 6px #ffc107; animation: pulse 1s infinite; }
+.status-dot.disconnected { background: #dc3545; }
+.connection-status.connected .status-text { color: #28a745; }
+.connection-status.reconnecting .status-text { color: #ffc107; }
+.connection-status.disconnected .status-text { color: #dc3545; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+

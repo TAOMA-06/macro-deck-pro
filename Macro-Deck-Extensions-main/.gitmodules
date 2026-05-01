@@ -1,0 +1,231 @@
+[submodule "Plugins/RecklessBoon.DiscordPlugin"]
+	path = Plugins/RecklessBoon.DiscordPlugin
+	url = https://github.com/RecklessBoon/Macro-Deck-Discord-Plugin.git
+[submodule "Plugins/RecklessBoon.MacroDeck.GPUZ"]
+	path = Plugins/RecklessBoon.MacroDeck.GPUZ
+	url = https://github.com/RecklessBoon/Macro-Deck-GPU-Z-Plugin.git
+[submodule "Plugins/PhoenixWyllow.Soundboard4MacroDeck"]
+	path = Plugins/PhoenixWyllow.Soundboard4MacroDeck
+	url = https://github.com/PhoenixWyllow/Soundboard4MacroDeck2.git
+[submodule "Plugins/SuchByte.WindowsUtils"]
+	path = Plugins/SuchByte.WindowsUtils
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Windows-Utils-Plugin
+[submodule "IconPacks/MacroDeck.MacroDeckcolorfulgenericicons"]
+	path = IconPacks/MacroDeck.MacroDeckcolorfulgenericicons
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Colorful-Generic-Icons
+[submodule "Plugins/PhoenixWyllow.SoundPadPlugin"]
+	path = Plugins/PhoenixWyllow.SoundPadPlugin
+	url = https://github.com/PhoenixWyllow/MacroDeck.SoundPad
+[submodule "IconPacks/MidoMatrix.Simpleblue"]
+	path = IconPacks/MidoMatrix.Simpleblue
+	url = https://github.com/imohammedramadan/Macro-Deck-Simple-Blue-Icons
+[submodule "IconPacks/PhoenixWyllow.CleanFramed"]
+	path = IconPacks/PhoenixWyllow.CleanFramed
+	url = https://github.com/PhoenixWyllow/MacroDeckCleanFramedIcons.git
+[submodule "IconPacks/PhoenixWyllow.CleanFrameless"]
+	path = IconPacks/PhoenixWyllow.CleanFrameless
+	url = https://github.com/PhoenixWyllow/MacroDeckCleanFramelessIcons.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel"]
+	path = IconPacks/RecklessBoon.PoweredSteel
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel.git
+[submodule "Plugins/PhoenixWyllow.VoicemeeterPlugin"]
+	path = Plugins/PhoenixWyllow.VoicemeeterPlugin
+	url = https://github.com/PhoenixWyllow/MacroDeck.Voicemeeter.git
+[submodule "IconPacks/puppy.mistyiconpack"]
+	path = IconPacks/puppy.mistyiconpack
+	url = https://github.com/whosthispuppy/misty
+[submodule "IconPacks/desatur8.Voicemeeter"]
+	path = IconPacks/desatur8.Voicemeeter
+	url = https://github.com/desatur8/MacroDeck-Icons-Voicemeeter.git
+[submodule "Plugins/jbcarreon123.ShareXPlugin"]
+	path = Plugins/jbcarreon123.ShareXPlugin
+	url = https://github.com/jbcarreon123/MacroDeck2-ShareXPlugin
+[submodule "Plugins/RecklessBoon.MacroDeck.PhilipsHuePlugin"]
+	path = Plugins/RecklessBoon.MacroDeck.PhilipsHuePlugin
+	url = https://github.com/RecklessBoon/Macro-Deck-Philips-Hue-Plugin
+[submodule "Plugins/Xenox003.MagicHome"]
+	path = Plugins/Xenox003.MagicHome
+	url = https://github.com/Xenox003/MacroDeckMagicHome
+[submodule "IconPacks/puppy.mistydarkiconpack"]
+	path = IconPacks/puppy.mistydarkiconpack
+	url = https://github.com/whosthispuppy/misty-dark
+[submodule "Plugins/MacroDeck.StreamDeckConnectorPlugin"]
+	path = Plugins/MacroDeck.StreamDeckConnectorPlugin
+	url = https://github.com/Macro-Deck-org/Stream-Deck-Connector-Plugin
+[submodule "IconPacks/Varelx.VarelxIconPack"]
+	path = IconPacks/Varelx.VarelxIconPack
+	url = https://github.com/Varelx/varelx-icon-pack
+[submodule "Plugins/Develeon64.SpotifyPlugin"]
+	path = Plugins/Develeon64.SpotifyPlugin
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Spotify-Plugin
+[submodule "Plugins/Xenox003.MagicHome"]
+  	url = https://github.com/Xenox003/MacroDeckMagicHome.git
+[submodule "Plugins/jbcarreon123.AHKPlugin"]
+	path = Plugins/jbcarreon123.AHKPlugin
+	url = https://github.com/jbcarreon123/MacroDeck2-AHKPlugin
+[submodule "Plugins/RecklessBoon.MacroDeck.StreamlabsOBSPlugin"]
+	path = Plugins/RecklessBoon.MacroDeck.StreamlabsOBSPlugin
+	url = https://github.com/RecklessBoon/Macro-Deck-Streamlabs-OBS-Plugin.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Toggle"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Toggle
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Toggle.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Design"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Design
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Design.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Writing"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Writing
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Writing.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Social"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Social
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Social.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.MediaPlayback"]
+	path = IconPacks/RecklessBoon.PoweredSteel.MediaPlayback
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Media-Playback.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.MusicAudio"]
+	path = IconPacks/RecklessBoon.PoweredSteel.MusicAudio
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Music-Audio.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Gaming"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Gaming
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Gaming.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.DevicesHardware"]
+	path = IconPacks/RecklessBoon.PoweredSteel.DevicesHardware
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Devices-Hardware.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.FilmVideo"]
+	path = IconPacks/RecklessBoon.PoweredSteel.FilmVideo
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Film-Video.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Files"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Files
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Files.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Communication"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Communication
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Communication.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Editing"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Editing
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Editing.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Connectivity"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Connectivity
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Connectivity.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Coding"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Coding
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Coding.git
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Arrows"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Arrows
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Arrows.git
+[submodule "Plugins/Sulbon.UDPCallUnity"]
+	path = Plugins/Sulbon.UDPCallUnity
+	url = https://github.com/sulbon/Macro-Deck-Unity-Plugin
+[submodule "IconPacks/RecklessBoon.PoweredSteel.Security"]
+	path = IconPacks/RecklessBoon.PoweredSteel.Security
+	url = https://github.com/RecklessBoon/Macro-Deck-Icon-Powered-Steel-Security
+[submodule "IconPacks/Pukima.Overwatch.HeroIcons"]
+	path = IconPacks/Pukima.Overwatch.HeroIcons
+	url = https://github.com/Pukima-MacroDeck/Icons-Overwatch-HeroIcons
+[submodule "IconPacks/Pukima.Overwatch.HeroIllustrations"]
+	path = IconPacks/Pukima.Overwatch.HeroIllustrations
+	url = https://github.com/Pukima-MacroDeck/Icons-Overwatch-HeroIllustrations
+[submodule "IconPacks/Pukima.Overwatch.Sprays"]
+	path = IconPacks/Pukima.Overwatch.Sprays
+	url = https://github.com/Pukima-MacroDeck/Icons-Overwatch-Sprays
+[submodule "IconPacks/Pukima.Overwatch.Abilities"]
+	path = IconPacks/Pukima.Overwatch.Abilities
+	url = https://github.com/Pukima-MacroDeck/Icons-Overwatch-Abilities
+[submodule "IconPacks/Pukima.Overwatch.Other"]
+	path = IconPacks/Pukima.Overwatch.Other
+	url = https://github.com/Pukima-MacroDeck/Icons-Overwatch-Other
+[submodule "IconPacks/Pukima.Overwatch.HeroPortraits"]
+	path = IconPacks/Pukima.Overwatch.HeroPortraits
+	url = https://github.com/Pukima-MacroDeck/Icons-Overwatch-HeroPortraits
+[submodule "IconPacks/Pukima.Overwatch.PlayerIcons"]
+	path = IconPacks/Pukima.Overwatch.PlayerIcons
+	url = https://github.com/Pukima-MacroDeck/Icons-Overwatch-PlayerIcons
+[submodule "Plugins/jbcarreon123.WebNowPlayingPlugin"]
+	path = Plugins/jbcarreon123.WebNowPlayingPlugin
+	url = https://github.com/jbcarreon123/MacroDeck2-WebNowPlayingPlugin
+[submodule "Plugins/Ize.Speedtest"]
+	path = Plugins/Ize.Speedtest
+	url = https://github.com/Ize83/Ize.Speedtest
+[submodule "IconPacks/Piripe.Fluent"]
+	path = IconPacks/Piripe.Fluent
+	url = https://github.com/Piripe/MacroDeck-FluentIcons
+[submodule "IconPacks/Twitchiger.CleanIcons"]
+	path = IconPacks/Twitchiger.CleanIcons
+	url = https://github.com/devTwitchiger/MacroDeckCleanIcons
+[submodule "IconPacks/morbeckp.Lime.Pack"]
+	path = IconPacks/morbeckp.Lime.Pack
+	url = https://github.com/morbeckp/macro-deck-iconpack
+[submodule "Plugins/SuchByte.GHUBBatteries"]
+	path = Plugins/SuchByte.GHUBBatteries
+	url = https://github.com/manuelmayer-dev/Macro-Deck-GHUB-Batteries
+[submodule "Plugins/SuchByte.PiHolePlugin"]
+	path = Plugins/SuchByte.PiHolePlugin
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Pi-hole-Plugin
+[submodule "Plugins/SuchByte.MediaControls"]
+	path = Plugins/SuchByte.MediaControls
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Media-Controls-Plugin
+[submodule "Plugins/SuchByte.SinusBotPlugin"]
+	path = Plugins/SuchByte.SinusBotPlugin
+	url = https://github.com/manuelmayer-dev/Macro-Deck-SinusBot-Plugin
+[submodule "Plugins/SuchByte.OBS-WebSocketPlugin"]
+	path = Plugins/SuchByte.OBS-WebSocketPlugin
+	url = https://github.com/manuelmayer-dev/Macro-Deck-OBS-WebSocket-Plugin
+[submodule "Plugins/SuchByte.TwitchPlugin"]
+	path = Plugins/SuchByte.TwitchPlugin
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Twitch-Plugin
+[submodule "Plugins/Develeon64.SpotifyPlugin"]
+	path = Plugins/Develeon64.SpotifyPlugin
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Spotify-Plugin
+[submodule "Plugins/SuchByte.HomeAssistantPlugin"]
+	path = Plugins/SuchByte.HomeAssistantPlugin
+	url = https://github.com/manuelmayer-dev/Macro-Deck-Home-Assistant-Plugin
+[submodule "Plugins\\SuchByte.OBS-WebSocketPlugin"]
+	url = https://github.com/RecklessBoon/Macro-Deck-OBS-WebSocket-Plugin
+[submodule "Plugins\\SuchByte.TwitchPlugin"]
+	url = https://github.com/RecklessBoon/Macro-Deck-Twitch-Plugin
+[submodule "Plugins/MrVibesRSA.StreamerbotPlugin"]
+	path = Plugins/MrVibesRSA.StreamerbotPlugin
+	url = https://github.com/MrVibesRSA/Streamer.bot-Plugin
+[submodule "IconPacks/Glacir.Helldivers2.Stratagems"]
+	path = IconPacks/Glacir.Helldivers2.Stratagems
+	url = https://github.com/Glacir/Glacir.Helldivers2.Stratagems
+[submodule "Plugins/CozurOfficial.AutoClicker"]
+	path = Plugins/CozurOfficial.AutoClicker
+	url = https://github.com/CozurOfficial/Macro-Deck-Auto-Clicker-Plugin
+[submodule "Plugins/hashashin.FxCommands"]
+	path = Plugins/hashashin.FxCommands
+	url = https://github.com/hashashin/hashashin.FxCommands
+[submodule "Plugins/dichternebel.YaSB"]
+	path = Plugins/dichternebel.YaSB
+	url = https://github.com/dichternebel/macrodeck-yasb-plugin.git
+[submodule "Plugins/FarLemon.JsonUtilityPlugin"]
+	path = Plugins/FarLemon.JsonUtilityPlugin
+	url = https://github.com/FarLemon/Macro-Deck-JSON-Utility-Plugin.git
+[submodule "Plugins/ItaiMarom.LibreHardwareMonitorPlugin"]
+	path = Plugins/ItaiMarom.LibreHardwareMonitorPlugin
+	url = https://github.com/dominic25/ItaiMarom.LibreHardwareMonitorPlugin
+[submodule "IconPacks/TwigYT.MacroDeck.MaterialDesignIconsPack"]
+	path = IconPacks/TwigYT.MacroDeck.MaterialDesignIconsPack
+	url = https://github.com/TwigYT/MacroDeck.MaterialDesignIconsPack
+[submodule "Plugins/Stubbs.HellDivers2Strats"]
+	path = Plugins/Stubbs.HellDivers2Strats
+	url = https://github.com/rstubbs94/Stubbs.HellDivers2Strats
+[submodule "Plugins/DoggoDogPack.MultiDisplayVCPClient"]
+	path = Plugins/DoggoDogPack.MultiDisplayVCPClient
+	url = https://github.com/dog199200/MultiDisplayVCPClient
+[submodule "Plugins/CountTogether.MacroDeckPlugin"]
+	path = Plugins/CountTogether.MacroDeckPlugin
+	url = https://github.com/CountTogether/Macro-Deck-2-Plugin
+[submodule "Plugins/sugoides.HWiNFO64"]
+	path = Plugins/sugoides.HWiNFO64
+	url = https://github.com/sugoides/macro-deck-HWiNFO64-plugin
+[submodule "Plugins/DiegoFdezAb.VolumeMixerPlugin"]
+	path = Plugins/DiegoFdezAb.VolumeMixerPlugin
+	url = https://github.com/DiegoFdezAb/MacroDeckVolumeMixerPlugin
+[submodule "Plugins/Niyah.SpicetifyBridge"]
+	path = Plugins/Niyah.SpicetifyBridge
+	url = https://github.com/NiyahVE/MDBridgeSpicetify
+[submodule "Plugins/DaNeo.Teamspeak3Plugin"]
+	path = Plugins/DaNeo.Teamspeak3Plugin
+	url = https://github.com/DaNeo61/Teamspeak3Plugin.git
+[submodule "Plugins/LeoM.Cs2Gsi"]
+	path = Plugins/LeoM.Cs2Gsi
+	url = https://github.com/leo-divini/CS2_Macro_Deck_Plugin
