@@ -4,7 +4,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$rootDir = Split-Path -Parent $PSScriptRoot
+$rootDir = $PSScriptRoot
 $projectDir = Join-Path $rootDir "MacroDeck"
 $publishDir = Join-Path $projectDir "bin\Publish"
 $setupDir = Join-Path $rootDir "MacroDeck.Setup"
