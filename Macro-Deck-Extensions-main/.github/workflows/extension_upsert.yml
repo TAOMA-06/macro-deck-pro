@@ -1,0 +1,129 @@
+name: Add/Update Extension
+
+on:
+  workflow_dispatch:
+    inputs:
+      github_http_url:
+        description: 'GitHub Repo HTTP URL'
+        required: true
+        type: string
+      commit_ref:
+        description: 'Commit Ref (tag/branch/commit)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  
+jobs:
+  pull_submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Get manifest details
+        run: |
+          rm -rf ../temp
+          mkdir ../temp
+          cd ../temp
+          git clone "${{ inputs.github_http_url }}" .
+          git checkout "${{ inputs.commit_ref }}"
+          ext_type=$(git cat-file -p HEAD:ExtensionManifest.json | jq -r '[.type][0]')
+          package_id=$(git cat-file -p HEAD:ExtensionManifest.json | jq -r '[.packageId][0]')
+          if [ $ext_type != "Plugin" ]; then ext_type='IconPack'; fi
+          echo "ext_type=$ext_type" >> $GITHUB_ENV
+          echo "package_id=$package_id" >> $GITHUB_ENV
+          cd ${{ github.workspace }}
+      
+      - name: Get Output Path
+        id: ext_type_check
+        run: |
+          if [ ${{ env.ext_type }} = 'Plugin' ]; then 
+            echo 'output_path=Plugins' >> $GITHUB_ENV
+          elif [ ${{ env.ext_type }} = 'IconPack' ]; then 
+            echo 'output_path=IconPacks' >> $GITHUB_ENV
+          fi
+      
+      - name: Clean branch
+        shell: bash
+        run: | 
+          git clean -xfd
+          git submodule foreach --recursive git clean -xfd
+          git reset --hard
+          git submodule foreach --recursive git reset --hard
+          if [ -d "./${{ env.output_path }}/${{ env.package_id }}" ]; then
+            git submodule update --init --recursive ./${{ env.output_path }}/${{ env.package_id }}
+          fi
+          
+      - name: Add Submodule (If Needed)
+        id: add_submodule
+        run: | 
+          if [ ! -d "./${{ env.output_path }}/${{ env.package_id }}" ]; then
+            git submodule add "${{ inputs.github_http_url }}" "./${{ env.output_path }}/${{ env.package_id }}"
+          else
+            git --git-dir "./${{ env.output_path }}/${{ env.package_id }}/.git" rev-parse HEAD | echo "current_hash=$(</dev/stdin)" >> $GITHUB_ENV
+          fi
+          
+      - name: Update Submodule
+        run: |
+          cd "./${{ env.output_path }}/${{ env.package_id }}"
+          git gc --prune=now
+          git remote prune origin
+          git branch -D ${{ inputs.commit_ref }} || true
+          git tag -d ${{ inputs.commit_ref }} || true
+          git fetch origin --tags "${{ inputs.commit_ref }}"
+          git checkout FETCH_HEAD
+          cd ../..
+          
+      - name: Validate extension
+        shell: bash
+        run: | 
+          chmod +x ./Utils/validate_extension.sh
+          args=(
+            --extension-path "./${{ env.output_path }}/${{ env.package_id }}"
+            --ext-type "${{ env.ext_type }}"
+          )
+          if [[ -n "${{ env.current_hash }}" ]]; then
+            args+=(--previous-ref "${{ env.current_hash }}")
+          fi
+          ./Utils/validate_extension.sh "${args[@]}"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        id: create-pr
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update ${{ env.ext_type }} - ${{ env.package_id }}
+          title: '[${{ env.ext_type }} Update] ${{ env.package_id }} => ${{ inputs.commit_ref }}'
+          body: |
+            ## ${{ env.ext_type }} Update
+            
+            <table>
+              <tr>
+                <td><b>Plugin Type</b></td>
+                <td>${{ env.output_path }}</td>
+              </tr>
+              <tr>
+                <td><b>GitHub HTTP URL</b></td>
+                <td>${{ inputs.github_http_url }}</td>
+              </tr>
+              <tr>
+                <td><b>Package ID</b></td>
+                <td>${{ env.package_id }}</td>
+              </tr>
+              <tr>
+                <td><b>Commit Ref</b></td>
+                <td>${{ inputs.commit_ref }}</td>
+              </tr>
+            </table>
+          branch: feature/update-${{ env.package_id }}
+          delete-branch: true
+      
+      - name: Merge Pull Request
+        uses: "pascalgn/automerge-action@v0.15.6"
+        env:
+          MERGE_LABELS: ""
+          PULL_REQUEST: ${{ steps.create-pr.outputs.pull-request-number}}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
